@@ -31,7 +31,7 @@ def task_post(datay1):
         }
     json_String = json.dumps(data1)  
     print(json_String)     
-    resp = requests.post('https://coisibiz.ds.indianoil.in:44343/BA/tfmspost',data = json_String,auth = ('TASOIL1126','EEgBEvRt5Y'),verify = False)
+    resp = requests.post('URL',data = json_String,auth = ('USERNAME','PASSWORD'),verify = False)
     fg = resp.content.decode("utf-8")
     print(fg)
     hj = 'nil' 
