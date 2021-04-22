@@ -1,0 +1,58 @@
+
+<style>
+    
+    table.dataframe,
+    .dataframe th,
+    .dataframe td {
+        border: none;
+        border-bottom: 1px solid #C8C8C8;
+        border-collapse: collapse;
+        text-align: left;
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9em;
+    }
+
+    table.dataframe {
+        display: block;
+    }
+    thead.dataframe{
+        position: sticky;
+    }
+
+     .page{
+     height:580px;
+     width:100%;
+     overflow: auto;
+     overflow-x: hidden;
+  }
+
+
+    .female th {
+         position: sticky;
+         top: 0;
+        background-color: red;
+        color: white;
+    }
+    tbody{
+        background-color:#ffff99;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fff;
+    }
+
+    tr:hover {
+        background-color: #ffff99;
+    }
+</style>
+<title>Simple tables</title>
+<div class=page id="random_data">
+    {% for table in tables %}
+    {{ table|safe }}
+    {% endfor %}
+</div>
